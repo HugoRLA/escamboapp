@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+#Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
+gem 'rails-i18n'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,5 +45,8 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #Better error page for Rack apps
+  gem "better_errors"
 end
 
