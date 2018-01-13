@@ -11,6 +11,10 @@ gem 'rails-i18n'
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Bootstrap
+gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
+gem 'bootstrap_sb_admin_base_v2'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
