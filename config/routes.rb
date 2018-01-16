@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :backoffice do
-  get 'categories/index'
-  end
 
   namespace :site do
   get 'home' => 'home#index'
@@ -9,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :backoffice do
     get '' => 'dashboard#index'
+    resources :categories, except: [:destroy, :show]
     get 'dashboard' => 'dashboard#index'
   end
 
