@@ -9,14 +9,15 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name), role: "form") do |f| %>
             <fieldset>
               <div class="form-group">
-                <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "E-mail", type: "email", autofocus: "autofocus"  %>
+                <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: t('activerecord.attributes.user.email'), type: "email", autofocus: "autofocus"  %>
               </div>
               <div class="form-group">
-                <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password", type: "password" %>
+                <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: t('activerecord.attributes.user.password'), type: "password" %>
               </div>
               <div class="checkbox">
                 <label>
-                  <%= f.check_box :remember_me %>Remember Me
+                  <%= f.check_box :remember_me %>
+                  <%= t('activerecord.attributes.user.remember_me') %>
                 </label>
               </div>
               <%= f.submit t('.sign_in'), class:"btn btn-lg btn-success btn-block" %>
