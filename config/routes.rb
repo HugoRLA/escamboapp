@@ -8,9 +8,10 @@ Rails.application.routes.draw do
     get '' => 'dashboard#index'
     resources :categories, except: [:destroy, :show]
     get 'dashboard' => 'dashboard#index'
+    get 'admins/index'
   end
 
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
   devise_for :members
   root 'site/home#index'
   # The priority is based upon order of creation: first created -> highest priority.
