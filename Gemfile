@@ -13,6 +13,8 @@ gem 'devise'
 gem 'devise-i18n'
 # Bootstrap
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
+# NotifyJS
+gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
 # Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
 # Use SCSS for stylesheets
