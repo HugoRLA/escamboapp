@@ -25,7 +25,7 @@
           <% end %>
           <script>
               <% if notice %>
-              $.notify("<%= notice %>", "success");
+              $.notify("<%= notice %>", "success",{autoHideDelay: 5000});
               <% end %>
           </script>
         </div>

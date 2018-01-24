@@ -10,9 +10,9 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def create
-    @admin = Admin.new(params_category)
+    @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to backoffice_categories_path, notice: "Administrador #{@admin.email} registada com sucesso"
+      redirect_to backoffice_admins_path, notice: "Administrador #{@admin.email} registada com sucesso"
     else
       render :new
     end
@@ -28,8 +28,8 @@ class Backoffice::AdminsController < BackofficeController
       params[:admin].delete(:password_confirmation)
     end
 
-    if @admin.update(params_category)
-      redirect_to backoffice_categories_path, notice: "Administrador #{@admin.description} actualizada com sucesso"
+    if @admin.update(params_admin)
+      redirect_to backoffice_admins_path, notice: "Administrador #{@admin.email} actualizada com sucesso"
     else
       render :edit
     end
