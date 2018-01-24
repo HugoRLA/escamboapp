@@ -23,6 +23,11 @@
               <%= f.submit t('.sign_in'), class:"btn btn-lg btn-success btn-block" %>
             </fieldset>
           <% end %>
+          <script>
+              <% if notice %>
+              $.notify("<%= notice %>", "success");
+              <% end %>
+          </script>
         </div>
       </div>
     </div>
