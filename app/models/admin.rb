@@ -1,4 +1,4 @@
-clasattributesActiveRecord::Base
+class Admin < ActiveRecord::Base
 
   enum role: [:full_access, :restricted_access]
 
