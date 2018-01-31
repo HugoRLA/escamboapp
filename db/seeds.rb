@@ -27,7 +27,7 @@ end
 puts "Inserting Categories...[OK]"
 
 puts "Inserting Admin..."
-Admin.create!(email: "admin@admin", password: "admin1", password_confirmation: "admin1" )
+Admin.create!(name: "supadm", role: 0,email: "admin@admin", password: "admin1", password_confirmation: "admin1" )
 puts "Inserting Admin...[OK]"
 puts "Ended Population"
 
