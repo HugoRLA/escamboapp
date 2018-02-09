@@ -7,6 +7,7 @@ class Backoffice::AdminsController < BackofficeController
 
   def new
     @admin = Admin.new
+    authorize @admin
   end
 
   def create
@@ -19,15 +20,6 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def update
-
-    pwd = params[:admin][:password]
-    pwd_confirm = params[:admin][:password_confirmation]
-
-    if pwd.blank? && pwd_confirm.blank?
-      params[:admin].delete(:password)
-      params[:admin].delete(:password_confirmation)
-    end
-
     if @admin.update(params_admin)
       redirect_to backoffice_admins_path, notice: "Administrador #{@admin.email} actualizada com sucesso"
     else
@@ -56,6 +48,13 @@ class Backoffice::AdminsController < BackofficeController
   end
 
   def params_admin
+    pwd = params[:admin][:password]
+    pwd_confirm = params[:admin][:password_confirmation]
+
+    if pwd.blank? && pwd_confirm.blank?
+      params[:admin].except!(:password, :password_confirmation)
+    end
+
     params.require(:admin).permit(:name, :email, :password, :password_confirmation)
   end
 end
