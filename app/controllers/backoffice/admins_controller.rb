@@ -2,7 +2,7 @@ class Backoffice::AdminsController < BackofficeController
   before_action :set_admin, only: [:edit, :update, :destroy]
 
   def index
-    @admins = Admin.all
+    @admins = policy_scope(Admin)
   end
 
   def new
@@ -55,6 +55,6 @@ class Backoffice::AdminsController < BackofficeController
       params[:admin].except!(:password, :password_confirmation)
     end
 
-    params.require(:admin).permit(:name, :email, :password, :password_confirmation)
+      params.require(:admin).permit(:name, :role, :email, :password, :password_confirmation)
   end
 end
