@@ -47,4 +47,6 @@ Rails.application.configure do
   $stdout.sync = true
   # Webconsole
   config.web_console.whitelisted_ips = ENV['TRUSTED_IP']
+
+  config.i18n.available_locales = [:pt, :en]
 end

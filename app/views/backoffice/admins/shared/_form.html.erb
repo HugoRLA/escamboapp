@@ -1,5 +1,5 @@
 
-<h1 class="page-header">Categorias</h1>
+<h1 class="page-header">Administrador</h1>
 <% if @admin.errors.any? %>
   <div class="alert alert-danger alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -30,7 +30,7 @@
         <%= f.label :role %>
         <%= f.collection_radio_buttons(:role, options_for_roles, :id, :description) do |b| %>
           <div class="radio">
-            <%= b.label { b.radio_button + b.value} %>
+            <%= b.label { b.radio_button + b.text} %>
 
           </div>
         <% end %>

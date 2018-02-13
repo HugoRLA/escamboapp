@@ -11,6 +11,10 @@ gem 'rails-i18n'
 gem 'devise'
 # Translations for the devise gem
 gem 'devise-i18n'
+# Internationalization (i18n) library for Ruby
+gem 'i18n'
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
 # Bootstrap
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
 # NotifyJS
