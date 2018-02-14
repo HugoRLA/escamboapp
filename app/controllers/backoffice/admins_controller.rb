@@ -55,6 +55,6 @@ class Backoffice::AdminsController < BackofficeController
       params[:admin].except!(:password, :password_confirmation)
     end
 
-      params.require(:admin).permit(:name, :role, :email, :password, :password_confirmation)
+      params.require(:admin).permit(policy(@admin).permit_attributes)
   end
 end
