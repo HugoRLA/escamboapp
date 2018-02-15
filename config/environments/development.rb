@@ -49,4 +49,10 @@ Rails.application.configure do
   config.web_console.whitelisted_ips = ENV['TRUSTED_IP']
 
   config.i18n.available_locales = [:pt, :en]
+
+  # MailCather Config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+  config.action_mailer.raise_delivery_errors = false
+
 end
