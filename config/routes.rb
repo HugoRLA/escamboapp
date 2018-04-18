@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   namespace :backoffice do
     get '' => 'dashboard#index'
+    resources :send_mail, only: [:edit, :create]
     resources :categories, except: [:destroy, :show]
     resources :admins, except: [:show]
     get 'dashboard' => 'dashboard#index'

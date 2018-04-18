@@ -37,7 +37,7 @@ pt:
     failure:
       already_authenticated: Já se encontra autenticado.
       inactive: A sua conta ainda não foi activada.
-      invalid: 
+      invalid: A username ou password incorrecta
       last_attempt: Tem mais uma tentativa antes da sua conta ser bloqueada.
       locked: A sua conta está bloqueada.
       not_found_in_database: 
@@ -134,7 +134,7 @@ pt:
       failure:
         already_authenticated: Já se encontra autenticado.
         inactive: A sua conta ainda não foi activada.
-        invalid:
+        invalid:  A username ou password incorrecta
         last_attempt: Tem mais uma tentativa antes da sua conta ser bloqueada.
         locked: A sua conta está bloqueada.
         not_found_in_database:
