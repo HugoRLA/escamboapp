@@ -1,0 +1,9 @@
+$(function () {
+
+    $('#sendMailModal').modal('hide');
+    $('#message-text').val('');
+    $('#recipient-name').val('');
+
+    $.notify('<%= @notify_mesage %>', "success");
+
+});
