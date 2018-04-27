@@ -31,6 +31,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # Minimal authorization through OO design and pure Ruby classes
 gem 'pundit'
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

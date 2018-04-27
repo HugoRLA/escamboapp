@@ -4,5 +4,6 @@ class Site::HomeController < ApplicationController
 
   def index
     @categories = Category.all;
+    @ads = Ad.order(created_at: :desc).limit(5)
   end
 end
