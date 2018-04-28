@@ -19,16 +19,17 @@ namespace :utils do
 
     desc "Ads Creation"
     task ads: :environment do
-      puts "Creating of ads..."
+      puts "Creating Ads..."
       100.times do
         Ad.create!(
             title: Faker::Lorem.sentence([2,3,4,5].sample),
             description: Faker::Lorem.sentence([2,3].sample),
             member: Member.all.sample,
-            category: Category.all.sample
+            category: Category.all.sample,
+            price: "#{Random.rand(500)}.#{Random.rand(99)}"
         )
       end
-      puts "Creating of ads...[SUCCESS]"
+      puts "Creating Ads...[SUCCESS]"
     end
   end
 

@@ -33,6 +33,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'pundit'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
+# Integration of RubyMoney - Money with Rails
+gem 'money-rails'
+
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
