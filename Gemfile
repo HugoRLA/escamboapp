@@ -35,7 +35,8 @@ gem 'pundit'
 gem 'faker'
 # Integration of RubyMoney - Money with Rails
 gem 'money-rails'
-
+# Easy file attachment management for ActiveRecord
+gem "paperclip", "~> 6.0.0"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
