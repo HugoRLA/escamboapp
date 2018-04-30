@@ -28,7 +28,7 @@ sudo apt-get update
 sudo apt-get install imagemagick libmagickwand-dev
 ```
 
-* Graphviz (https://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
+* Graphviz (https://www.graphviz.org) - Only for dev enviroment
 
 ```
 sudo apt-get update

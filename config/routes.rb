@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   namespace :site do
   get 'home' => 'home#index'
+    namespace :profile do
+      resources :dashboard, only: [:index]
+    end
   end
 
   namespace :backoffice do
