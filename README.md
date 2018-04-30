@@ -7,6 +7,8 @@ Add Dynamic Modal in the backoffice to sendMail (Aula 46)
 
 Review feature mail
 
+Improve translations
+
 `Bugs`
 In the backoffice, in the tab Admins, is missing the lines in the Header
 

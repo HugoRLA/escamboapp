@@ -18,16 +18,17 @@ categories = [
 "Imóveis",
 "Empregos e negócios"]
 
-puts "Beging Population..."
-puts "Inserting Categories..."
+
+puts "Creating Categories..."
 categories.each do |category|
   Category.find_or_create_by(description: category )
-  puts "Insert Category " + category
 end
-puts "Inserting Categories...[OK]"
+puts "Creating Categories...[OK]"
 
-puts "Inserting Admin..."
+puts "Creating Default Admin..."
 Admin.create!(name: "supadm", role: 0,email: "admin@admin", password: "admin1", password_confirmation: "admin1" )
-puts "Inserting Admin...[OK]"
-puts "Ended Population"
+puts "Creating Default Admin...[OK]"
 
+puts "Creating Default Member..."
+Member.create!(email: "member@member", password: "123456", password_confirmation: "123456" )
+puts "Creating Default Member...[OK]"

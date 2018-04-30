@@ -1,11 +1,25 @@
 namespace :utils do
+
+  desc "Setup/Reset Enviroment"
+  task setup_env: :environment do
+  puts "Setup/Reset Enviroment..."
+    puts "Drop Database... #{%x(rake db:drop)}"
+    puts "Init Database... #{%x(rake db:create)}"
+    puts "Migrations Database... #{%x(rake db:migrate)}"
+    puts "Populate Database..."
+    puts %x(rake db:seed)
+    puts %x(rake utils:populate:members)
+    puts %x(rake utils:populate:ads)
+  puts "Setup/Reset Enviroment...[SUCCESS]"
+  end
+
   namespace :populate do
 
     desc "Members Creation"
     task members: :environment do
       puts "Creating Members..."
       100.times do
-        member = Member.new(
+        Member.create!(
             email: Faker::Internet.email,
             password: "123456",
             password_confirmation: "123456")
