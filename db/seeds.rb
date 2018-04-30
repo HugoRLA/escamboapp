@@ -23,12 +23,12 @@ puts "Creating Categories..."
 categories.each do |category|
   Category.find_or_create_by(description: category )
 end
-puts "Creating Categories...[OK]"
+puts "Creating Categories...[SUCCESS]"
 
 puts "Creating Default Admin..."
 Admin.create!(name: "supadm", role: 0,email: "admin@admin", password: "admin1", password_confirmation: "admin1" )
-puts "Creating Default Admin...[OK]"
+puts "Creating Default Admin...[SUCCESS]"
 
 puts "Creating Default Member..."
 Member.create!(email: "member@member", password: "123456", password_confirmation: "123456" )
-puts "Creating Default Member...[OK]"
+puts "Creating Default Member...[SUCCESS]"

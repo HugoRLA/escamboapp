@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'home' => 'home#index'
     namespace :profile do
       resources :dashboard, only: [:index]
+      resources :ads, only: [:index]
     end
   end
 
