@@ -3,7 +3,9 @@ namespace :utils do
   desc "Setup/Reset Enviroment"
   task setup_env: :environment do
   puts "Setup/Reset Enviroment..."
+    path_images = Rails.root.join('public', 'system')
     puts "Drop Database... #{%x(rake db:drop)}"
+    puts "Delete Images... #{%x(rm -rf #{path_images})}"
     puts "Init Database... #{%x(rake db:create)}"
     puts "Migrations Database... #{%x(rake db:migrate)}"
     puts "Populate Database..."
