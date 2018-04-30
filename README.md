@@ -1,5 +1,5 @@
-# escamboapp
-escamboapp of RoR from Udemy
+# Escamboapp
+Ruby on Rails project from Udemy
 
 
 `TODO`
@@ -12,3 +12,21 @@ In the backoffice, in the tab Admins, is missing the lines in the Header
 
 `Enhancements`
 Switch add object action to the right side of the forms
+
+
+##### Dependencies
+
+* ImageMagick (https://www.imagemagick.org)
+ 
+```
+sudo apt-get update
+sudo apt-get install imagemagick libmagickwand-dev
+```
+
+* Graphviz (https://www.graphviz.org) - Apenas para Ambiente de Desenvolvimento
+
+```
+sudo apt-get update
+sudo apt-get install graphviz
+```
+ 

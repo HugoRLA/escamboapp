@@ -47,3 +47,7 @@ bower.json
 .idea
 
 Gemfile.lock
+
+/public/system/
+
+.vagrant/
