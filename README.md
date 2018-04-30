@@ -3,17 +3,20 @@ Ruby on Rails project from Udemy
 
 
 `TODO`
-Add Dynamic Modal in the backoffice to sendMail (Aula 46)
 
-Review feature mail
+* Add Dynamic Modal in the backoffice to sendMail (Aula 46)
 
-Improve translations
+* Review feature mail
+
+* Improve translations
 
 `Bugs`
-In the backoffice, in the tab Admins, is missing the lines in the Header
+
+* In the backoffice, in the tab Admins, is missing the lines in the Header
 
 `Enhancements`
-Switch add object action to the right side of the forms
+
+*   Switch add object action to the right side of the forms
 
 
 ##### Dependencies
