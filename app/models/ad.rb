@@ -11,5 +11,7 @@ class Ad < ActiveRecord::Base
 
   # scope
 
-  scope :last_six, -> {order(created_at: :desc).limit(6)}
+  scope :descending_order, -> (quantity = 10) {order(created_at: :desc).limit(quantity)}
+  scope :of_the, -> (member) {where(member: member)}
+
 end
