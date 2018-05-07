@@ -10,6 +10,8 @@ Ruby on Rails project from Udemy
 
 * Improve translations
 
+* Make new version of vagrant box that includes the imageMagick
+
 `Bugs`
 
 * In the backoffice, in the tab Admins, is missing the lines in the Header
@@ -35,3 +37,6 @@ sudo apt-get update
 sudo apt-get install graphviz
 ```
  
+#### Notes
+
+During development the ad block extension from Chrome blocks the images
