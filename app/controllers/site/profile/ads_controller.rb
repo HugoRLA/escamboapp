@@ -5,6 +5,22 @@ class Site::Profile::AdsController < Site::ProfileController
     @ads = Ad.of_the(current_member)
   end
 
+  def new
+    @ad = Ad.new
+    # Need to init price because in the view the currency simbol is not display
+    @ad.price = Money.new(0)
+  end
+
+  def create
+    @ad = Ad.new(params_ad)
+
+    if @ad.save
+      redirect_to site_profile_ads_path, notice: "Anúncio cadastrado com sucesso!"
+    else
+      render :new
+    end
+  end
+
   def edit
     #
   end
@@ -24,6 +40,6 @@ class Site::Profile::AdsController < Site::ProfileController
     end
 
     def params_ad
-      params.require(:ad).permit(:id, :title, :category_id, :price, :description)
+      params.require(:ad).permit(:id, :title, :category_id, :price, :description, :picture)
     end
 end

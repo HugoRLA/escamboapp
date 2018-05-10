@@ -1,0 +1,53 @@
+<%= form_for([:site, :profile, @ad], html: { multipart: true }) do |f| %>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "form-control", placeholder:"Enter email" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="form-group">
+        <%= f.label :category %>
+        <%= f.collection_select( :category_id, Category.all, :id, :description, {}, {class: "form-control"} ) %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-2">
+      <div class="form-group">
+        <%= f.label :price %>
+        <div class="input-group">
+          <span class="input-group-addon"><%= @ad.price.currency.symbol %></span>
+          <%= f.text_field :price, class: "form-control"%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="form-group">
+        <%= f.label :picture %> <br>
+        <%= image_tag @ad.picture(:medium), class: "img-thumbnail" %>
+        <%= f.file_field :picture %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control", rows: 7 %>
+      </div>
+    </div>
+  </div>
+
+
+  <%= submit_tag("Enviar", class: "btn btn-primary") %>
+<% end %>
