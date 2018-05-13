@@ -20,7 +20,7 @@ namespace :dev do
     desc "Members Creation"
     task members: :environment do
       puts "Creating Members..."
-      100.times do
+      25.times do
         Member.create!(
             email: Faker::Internet.email,
             password: "123456",
@@ -44,17 +44,19 @@ namespace :dev do
             member: Member.first,
             category: Category.all.sample,
             price: "#{Random.rand(500)},#{Random.rand(99)}",
+            finish_date: Date.today + Random.rand(99),
             picture: File.new(Rails.root.join('public', 'templates', 'imagesAds', "#{Random.rand(9)}.jpg"), 'r')
         )
       end
 
-      100.times do
+      50.times do
         Ad.create!(
             title: Faker::Lorem.sentence([2,3,4,5].sample),
             description: Faker::Lorem.sentence([2,3].sample),
             member: Member.all.sample,
             category: Category.all.sample,
             price: "#{Random.rand(500)},#{Random.rand(99)}",
+            finish_date: Date.today + Random.rand(99),
             picture: File.new(Rails.root.join('public', 'templates', 'imagesAds', "#{Random.rand(9)}.jpg"), 'r')
         )
       end
