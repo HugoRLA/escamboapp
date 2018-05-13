@@ -12,7 +12,9 @@ Ruby on Rails project from Udemy
 
 * Make new version of vagrant box that includes the imageMagick
 
-* Need to find image for when an image of an ad does not exists [/images/medium/missing.png]
+* ~~Need to find image for when an image of an ad does not exists [/images/medium/missing.png]~~
+
+* Check how money-rails works with i18n
 
 `Bugs`
 

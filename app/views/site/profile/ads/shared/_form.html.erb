@@ -1,3 +1,16 @@
+<% if @ad.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <ul>
+      <% @ad.errors.full_messages.each do |message| %>
+        <li>
+          <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for([:site, :profile, @ad], html: { multipart: true }) do |f| %>
   <div class="row">
     <div class="col-xs-6">
