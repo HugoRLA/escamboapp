@@ -1,26 +1,41 @@
-<h2><%= t('.sign_in') %></h2>
+<%= stylesheet_link_tag    'site/login', media: 'all'  %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true  %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+<div class="container">
+  <div class="omb_login">
+    <h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="row omb_row-sm-offset-3">
+      <div class="col-xs-12 col-sm-6">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class:"omb_loginForm"}) do |f| %>
+          <!--Usage of hmtl: {Options} because devise replace the class-->
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+              <%= f.email_field :email, autofocus: true, class:"form-control", placeholder:"Email" %>
+          </div>
+          <span class="help-block"></span>
+
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <%= f.password_field :password, autocomplete: "off", class:"form-control", placeholder:"Password"  %>
+          </div>
+          <span class="help-block"></span>
+
+          <%= f.submit t('.sign_in'), class:"btn btn-lg btn-primary btn-block"  %>
+          <div class="col-xs-12 col-sm-3">
+            <label class="checkbox">
+              <% if devise_mapping.rememberable? %>
+                <%= f.check_box :remember_me %>
+                Lembrar
+              <% end %>
+            </label>
+          </div>
+
+          <p class="omb_forgotPwd">
+            <a href="#">Forgot password?</a>
+          </p>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit t('.sign_in') %>
   </div>
-<% end %>
-
-<%= render "members/shared/links" %>
+</div>
