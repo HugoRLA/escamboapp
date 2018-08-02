@@ -69,11 +69,7 @@
 </div>
 <!-- /#wrapper -->
 
-<script>
-    <% if notice %>
-    $.notify("<%= notice %>", "success");
-    <% end %>
-</script>
+<%= render partial:'layouts/shared/notification' %>
 
 </body>
 

@@ -15,12 +15,6 @@ gem 'devise-i18n'
 gem 'i18n'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
-# Bootstrap
-gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
-# NotifyJS
-gem 'rails-assets-notifyjs', source: 'https://rails-assets.org'
-# Bootbox
-gem 'rails-assets-bootbox', source: 'https://rails-assets.org'
 # Rails gem of the Bootstrap based admin theme SB Admin 2.
 gem 'bootstrap_sb_admin_base_v2'
 # Use SCSS for stylesheets
@@ -56,6 +50,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+source 'https://rails-assets.org' do
+  # Bootstrap
+  gem 'rails-assets-bootstrap', '3.3.7'
+  # Bootstrap Notify
+  gem 'rails-assets-bootstrap-notify'
+  # Bootbox
+  gem 'rails-assets-bootbox'
+  # Animate CSS
+  gem 'rails-assets-animate-css'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
