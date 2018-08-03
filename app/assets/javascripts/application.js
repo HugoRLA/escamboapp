@@ -10,7 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require mouse0270--bootstrap-notify
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-notify
+
 

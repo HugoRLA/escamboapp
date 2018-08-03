@@ -54,7 +54,7 @@ source 'https://rails-assets.org' do
   # Bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
   # Bootstrap Notify
-  gem 'rails-assets-bootstrap-notify'
+  gem 'rails-assets-mouse0270--bootstrap-notify'
   # Bootbox
   gem 'rails-assets-bootbox'
   # Animate CSS
