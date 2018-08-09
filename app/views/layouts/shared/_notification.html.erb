@@ -1,5 +1,8 @@
 <% if notice %>
-    <%= javascript_tag "$.notify( {message: '#{notice}'},{type: 'success', placement: {from: 'top',align: 'right'}});" %>
+    <%= javascript_tag "$.notify( { message: '#{notice}'},
+                                  { type: 'success',
+                                    placement: {  from: 'top',
+                                                  align : 'center'}});" %>
 <% end %>
 
  <% if alert %>
@@ -12,7 +15,7 @@
         type: 'danger',
         placement: {
           from: 'top',
-          align: 'right'
+          align: 'center'
         }
       });"
   %>

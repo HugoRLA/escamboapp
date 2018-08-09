@@ -1,11 +1,15 @@
   Rails.application.routes.draw do
 
   namespace :site do
-  get 'home' => 'home#index'
+    get 'home' => 'home#index'
+
     namespace :profile do
       resources :dashboard, only: [:index]
       resources :ads, only: [:index, :edit, :update, :new, :create]
     end
+
+    resources :ad_details, only: [:show]
+
   end
 
   namespace :backoffice do

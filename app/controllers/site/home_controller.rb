@@ -5,3 +5,4 @@ class Site::HomeController < SiteController
     @ads = Ad.descending_order(10);
   end
 end
+
