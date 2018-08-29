@@ -40,7 +40,7 @@ namespace :dev do
       5.times do
         Ad.create!(
             title: Faker::Lorem.sentence([2,3,4,5].sample),
-            description: Faker::Lorem.paragraph([2,3,4].sample),
+            description: Faker::Markdown.sandwich(6, 3) ,
             member: Member.first,
             category: Category.all.sample,
             price: "#{Random.rand(500)},#{Random.rand(99)}",
@@ -52,7 +52,7 @@ namespace :dev do
       50.times do
         Ad.create!(
             title: Faker::Lorem.sentence([2,3,4,5].sample),
-            description: Faker::Lorem.sentence([2,3].sample),
+            description: Faker::Markdown.sandwich(6, 3) ,
             member: Member.all.sample,
             category: Category.all.sample,
             price: "#{Random.rand(500)},#{Random.rand(99)}",

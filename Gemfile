@@ -31,6 +31,8 @@ gem 'faker'
 gem 'money-rails'
 # Easy file attachment management for ActiveRecord
 gem "paperclip", "~> 6.0.0"
+# The safe Markdown parser, reloaded.
+gem "redcarpet"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -69,16 +71,12 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
   # Better error page for Rack apps
   gem "better_errors"
-
   # Generate Entity-Relationship Diagrams for Rails applications
   gem 'rails-erd'
-
   # Catches mail and serves it through a dream
   gem 'mailcatcher'
 end
