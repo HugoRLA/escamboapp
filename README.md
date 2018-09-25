@@ -16,6 +16,8 @@ Ruby on Rails project from Udemy
 
 * Check how money-rails works with i18n
 
+* Add a markdown editor for the ads (the one from the tutorial does not work well)
+
 `Bugs`
 
 * In the backoffice, in the tab Admins, is missing the lines in the Header
